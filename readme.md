@@ -2,7 +2,7 @@
 
 Forked from https://github.com/shameerc/docker-php7
 
-A boilerplate for a future Laravel project. This is made specific for local development.
+A boilerplate for a future Laravel project.
 
 # Why
 * OS X El Capitan comes with php 5. Newest Laravel need php 7
