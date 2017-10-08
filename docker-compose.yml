@@ -1,0 +1,32 @@
+version: "2"
+services:
+  nginx:
+      build:
+          context: ./nginx
+      ports:
+          - "8080:80"
+      volumes:
+          - ./blog:/var/app
+      container_name: nginx
+  fpm:
+      build:
+          context: ./fpm
+      volumes:
+          - ./blog:/var/app
+      expose:
+          - "9000"
+      environment:
+          - "DB_HOST=mariadb"
+          - "DB_DATABASE=laravel"
+      container_name: php
+  mariadb:
+      image: mariadb
+      #we need to expose DB's port for accessing it from your host(mysql command line or MySQLWorkbench)
+      ports:
+          - "8181:3306"
+      environment:
+          - MYSQL_ROOT_PASSWORD=root
+          - MYSQL_DATABASE=laravel
+      volumes:
+          - ./database:/var/lib/mysql
+      container_name: database
