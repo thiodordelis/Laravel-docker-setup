@@ -1,10 +1,11 @@
-version: "2"
+version: "3"
 services:
   nginx:
       build:
           context: ./nginx
       ports:
           - "8080:80"
+      restart: always
       volumes:
           - ./blog:/var/app
       container_name: nginx
@@ -15,6 +16,7 @@ services:
           - ./blog:/var/app
       expose:
           - "9000"
+      restart: always
       environment:
           - "DB_HOST=mariadb"
           - "DB_DATABASE=laravel"
@@ -24,6 +26,7 @@ services:
       #we need to expose DB's port for accessing it from your host(mysql command line or MySQLWorkbench)
       ports:
           - "8181:3306"
+      restart: always
       environment:
           - MYSQL_ROOT_PASSWORD=root
           - MYSQL_DATABASE=laravel
