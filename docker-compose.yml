@@ -13,7 +13,7 @@ services:
       build:
           context: ./fpm
       volumes:
-          - ./blog:/var/app
+          - ./app:/var/app
       expose:
           - "9000"
       restart: always
