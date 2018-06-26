@@ -12,7 +12,6 @@ A boilerplate for Laravel.
 * `mkdir myapp`
 * `cd myapp`
 * `git clone https://github.com/thiodordelis/Laravel-blog-Docker-setup.git .`
-* `cd myapp`
 * `docker-compose up`
 * `docker run --rm \-v $(pwd):/opt \-w /opt \shippingdocker/php-composer:latest \composer create-project laravel/laravel app` This will install the latest laravel using an alternative method inside the directory `app`
 * `cd app`
