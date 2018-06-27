@@ -7,7 +7,7 @@ services:
           - "8080:80"
       restart: always
       volumes:
-          - ./blog:/var/app
+          - ./app:/var/app
       container_name: nginx
   fpm:
       build:
