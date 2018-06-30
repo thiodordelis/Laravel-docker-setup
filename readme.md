@@ -2,7 +2,7 @@
 
 Forked from https://github.com/shameerc/docker-php7
 
-A boilerplate for Laravel for local development without Homestead / Vagrant or installed PHP 7.
+A Laravel 5.5+ setup for local development without Homestead / Vagrant or installed PHP 7.
 
 # Why
 * OS X El Capitan comes with php 5. Latest Laravel 5.5+ needs PHP 7
