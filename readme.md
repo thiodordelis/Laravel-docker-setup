@@ -2,11 +2,11 @@
 
 Forked from https://github.com/shameerc/docker-php7
 
-A boilerplate for Laravel.
+A boilerplate for Laravel for local development without Homestead / Vagrant or installed PHP 7.
 
 # Why
-* OS X El Capitan comes with php 5. Newest Laravel need php 7
-* There is no need (at least for me) to install/setup Homestead(or Vagrant)
+* OS X El Capitan comes with php 5. Latest Laravel 5.5+ needs PHP 7
+* You don't have to set up Homestead or Vagrant.
 
 # How to use
 * `mkdir myapp`
@@ -15,10 +15,14 @@ A boilerplate for Laravel.
 * `docker-compose up`
 * `docker run --rm \-v $(pwd):/opt \-w /opt \shippingdocker/php-composer:latest \composer create-project laravel/laravel app` This will install the latest laravel using an alternative method inside the directory `app`
 * `cd app`
-* Rename Laravel's `.env.example` to `.env` (if not already renamed)
+* Rename Laravel's `.env.example` to `.env` (if needed)
 * Configure `DB_*` settings inside `.env`
-* `docker exec <CONTAINER_ID> php artisan key:generate` (if not already generated)
+* `docker exec <CONTAINER_ID> php artisan key:generate` (if needed)
 * Navigate to `http://localhost:8080/`
 
+#Extras
+* To run `php artisan` commands -> `docker exec -it php php artisan <command>`
+* Update Laravel and all the packages with composer -> `docker run --rm \-v $(pwd):/opt \-w /opt \shippingdocker/php-composer:latest \composer update`
+
 # What is included
-* Latest nginx, MariaDB, php 7.2, Laravel 5.6
+* Latest nginx, MariaDB, PHP 7, Laravel 5.6
