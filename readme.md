@@ -25,4 +25,4 @@ A Laravel 5.5+ setup for local development without Homestead / Vagrant or instal
 * Update Laravel and all the packages with composer -> `docker run --rm \-v $(pwd):/opt \-w /opt \shippingdocker/php-composer:latest \composer update`
 
 # What is included
-* Latest nginx, MariaDB, PHP 7, Laravel 5.6
+* Latest nginx, MariaDB, PHP 7, Laravel 5.7
