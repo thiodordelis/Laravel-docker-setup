@@ -12,7 +12,7 @@ A Laravel 5.5+ setup for local development without Homestead / Vagrant or instal
 * `mkdir myapp`
 * `cd myapp`
 * `git clone https://github.com/thiodordelis/Laravel-blog-Docker-setup.git .`
-* `docker-compose up`
+* `docker-compose up -d`
 * `docker run --rm \-v $(pwd):/opt \-w /opt \shippingdocker/php-composer:latest \composer create-project laravel/laravel app` This will install the latest laravel using an alternative method inside the directory `app`
 * `cd app`
 * Rename Laravel's `.env.example` to `.env` (if needed)
